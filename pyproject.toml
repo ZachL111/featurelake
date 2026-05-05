@@ -1,0 +1,5 @@
+[project]
+name = "featurelake"
+version = "0.1.0"
+description = "Maintain typed feature schemas and train-serving parity checks."
+requires-python = ">=3.11"
