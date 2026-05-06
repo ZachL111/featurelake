@@ -1,0 +1,29 @@
+{
+  "repo": "featurelake",
+  "language": "Python",
+  "category": "Data engineering",
+  "case_count": 5,
+  "score_formula": "signal * 2 + slack + confidence - drag * 3",
+  "lane_thresholds": {
+    "ship": 140,
+    "watch": 105
+  },
+  "read_order": [
+    "README.md",
+    "fixtures/domain_review.csv",
+    "metadata/domain-review.json",
+    "examples/featurelake-walkthrough.md"
+  ],
+  "first_question": "Does schema drift still dominate the review result?",
+  "second_question": "Is partition skew being penalized hard enough before quality gap is trusted?",
+  "highest_case": {
+    "name": "stale",
+    "focus": "schema drift",
+    "score": 198
+  },
+  "lowest_case": {
+    "name": "baseline",
+    "focus": "schema drift",
+    "score": 154
+  }
+}
