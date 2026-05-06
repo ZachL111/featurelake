@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 python -m unittest discover -s tests
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-featurelake-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-featurelake-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-featurelake-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
